@@ -1,8 +1,9 @@
-package com.myblog.salog;
+package com.myblog.salog.article;
 
 import java.time.LocalDateTime;
 import java.util.List;
 
+import com.myblog.salog.comment.Comment;
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -30,7 +31,7 @@ public class Article {
 
     private LocalDateTime createDate;
 
-    @OneToMany(mappedBy = "question", cascade = CascadeType.REMOVE)
-    private List<Answer> answerList;
+    @OneToMany(mappedBy = "article", cascade = CascadeType.REMOVE)
+    private List<Comment> commentList;
 
 }

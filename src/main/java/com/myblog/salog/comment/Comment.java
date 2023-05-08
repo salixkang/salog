@@ -1,6 +1,7 @@
-package com.myblog.salog;
+package com.myblog.salog.comment;
 import java.time.LocalDateTime;
 
+import com.myblog.salog.article.Article;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
