@@ -14,8 +14,8 @@
             <td>
                 <a th:href="@{|/article/detail/${article.id}|}" th:text="${article.subject}"></a>
                 <span class="text-danger small ms-2"
-                      th:if="${#lists.size(question.answerList) > 0}"
-                      th:text="${#lists.size(question.answerList)}">
+                      th:if="${#lists.size(article.commentList) > 0}"
+                      th:text="${#lists.size(article.commentList)}">
                 </span>
             </td>
             <td th:text="${#temporals.format(article.createDate, 'yyyy-MM-dd HH:mm')}"></td>
